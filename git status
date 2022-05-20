@@ -1,0 +1,148 @@
+warning: LF will be replaced by CRLF in app/build.gradle.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in build.gradle.
+The file will have its original line endings in your working directory
+[1mdiff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml[m
+[1mindex b19edd5..1291210 100644[m
+[1m--- a/.idea/deploymentTargetDropDown.xml[m
+[1m+++ b/.idea/deploymentTargetDropDown.xml[m
+[36m@@ -12,6 +12,6 @@[m
+         </deviceKey>[m
+       </Target>[m
+     </targetSelectedWithDropDown>[m
+[31m-    <timeTargetWasSelectedWithDropDown value="2022-04-23T20:34:51.861803800Z" />[m
+[32m+[m[32m    <timeTargetWasSelectedWithDropDown value="2022-04-25T20:03:47.694188200Z" />[m
+   </component>[m
+ </project>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/build.gradle b/app/build.gradle[m
+[1mindex 2095bf3..3de8cc0 100644[m
+[1m--- a/app/build.gradle[m
+[1m+++ b/app/build.gradle[m
+[36m@@ -1,6 +1,7 @@[m
+ plugins {[m
+     id 'com.android.application'[m
+     id 'org.jetbrains.kotlin.android'[m
+[32m+[m[41m   [m
+ }[m
+ [m
+ android {[m
+[36m@@ -39,6 +40,7 @@[m [mdependencies {[m
+     implementation 'androidx.appcompat:appcompat:1.4.1'[m
+     implementation 'com.google.android.material:material:1.5.0'[m
+     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'[m
+[32m+[m
+     testImplementation 'junit:junit:4.13.2'[m
+     androidTestImplementation 'androidx.test.ext:junit:1.1.3'[m
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'[m
+[1mdiff --git a/app/src/main/res/layout/fragment_login2.xml b/app/src/main/res/layout/fragment_login2.xml[m
+[1mindex 06a034f..f97cda9 100644[m
+[1m--- a/app/src/main/res/layout/fragment_login2.xml[m
+[1m+++ b/app/src/main/res/layout/fragment_login2.xml[m
+[36m@@ -20,9 +20,9 @@[m
+             android:layout_width="107dp"[m
+             android:layout_height="wrap_content"[m
+             android:layout_marginStart="40sp"[m
+[31m-            android:layout_marginTop="45sp"[m
+[32m+[m[32m            android:layout_marginTop="20sp"[m
+             android:layout_marginEnd="270sp"[m
+[31m-            android:text="Username"[m
+[32m+[m[32m            android:text="Name"[m
+             android:textColor="@color/black"[m
+             android:textSize="15sp"[m
+             android:textStyle="bold"[m
+[36m@@ -34,13 +34,63 @@[m
+             android:layout_height="50dp"[m
+             android:layout_marginStart="40sp"[m
+             android:layout_marginEnd="40sp"[m
+[31m-            android:layout_marginBottom="20sp"[m
+[32m+[m[32m            android:layout_marginBottom="5sp"[m
+             android:background="@drawable/rounded"[m
+             android:ems="10"[m
+             android:inputType="textPersonName"[m
+             android:minHeight="48dp"[m
+             android:text="  Username" />[m
+ [m
+[32m+[m[32m        <TextView[m
+[32m+[m[32m            android:id="@+id/textView10"[m
+[32m+[m[32m            android:layout_width="match_parent"[m
+[32m+[m[32m            android:layout_height="wrap_content"[m
+[32m+[m[32m            android:layout_marginStart="40sp"[m
+[32m+[m[32m            android:layout_marginTop="10sp"[m
+[32m+[m[32m            android:layout_marginEnd="270sp"[m
+[32m+[m[32m            android:text="Surname"[m
+[32m+[m[32m            android:textColor="@color/black"[m
+[32m+[m[32m            android:textSize="15sp"[m
+[32m+[m[32m            android:textStyle="bold" />[m
+[32m+[m
+[32m+[m[32m        <EditText[m
+[32m+[m[32m            android:id="@+id/signemail3"[m
+[32m+[m[32m            android:layout_width="match_parent"[m
+[32m+[m[32m            android:layout_height="50dp"[m
+[32m+[m[32m            android:layout_marginStart="40sp"[m
+[32m+[m[32m            android:layout_marginEnd="40sp"[m
+[32m+[m[32m            android:layout_marginBottom="5sp"[m
+[32m+[m[32m            android:background="@drawable/rounded"[m
+[32m+[m[32m            android:ems="10"[m
+[32m+[m[32m            android:inputType="textPersonName"[m
+[32m+[m[32m            android:minHeight="48dp"[m
+[32m+[m[32m            android:text="  E mail" />[m
+[32m+[m
+[32m+[m[32m        <TextView[m
+[32m+[m[32m            android:id="@+id/textView9"[m
+[32m+[m[32m            android:layout_width="match_parent"[m
+[32m+[m[32m            android:layout_height="wrap_content"[m
+[32m+[m[32m            android:layout_marginStart="40sp"[m
+[32m+[m[32m            android:layout_marginTop="10sp"[m
+[32m+[m[32m            android:layout_marginEnd="270sp"[m
+[32m+[m[32m            android:text="User Name"[m
+[32m+[m[32m            android:textColor="@color/black"[m
+[32m+[m[32m            android:textSize="15sp"[m
+[32m+[m[32m            android:textStyle="bold" />[m
+[32m+[m
+[32m+[m[32m        <EditText[m
+[32m+[m[32m            android:id="@+id/signemail2"[m
+[32m+[m[32m            android:layout_width="match_parent"[m
+[32m+[m[32m            android:layout_height="50dp"[m
+[32m+[m[32m            android:layout_marginStart="40sp"[m
+[32m+[m[32m            android:layout_marginEnd="40sp"[m
+[32m+[m[32m            android:layout_marginBottom="5sp"[m
+[32m+[m[32m            android:background="@drawable/rounded"[m
+[32m+[m[32m            android:ems="10"[m
+[32m+[m[32m            android:inputType="textPersonName"[m
+[32m+[m[32m            android:minHeight="48dp"[m
+[32m+[m[32m            android:text="  E mail" />[m
+[32m+[m
+         <TextView[m
+             android:id="@+id/textView2"[m
+             android:layout_width="match_parent"[m
+[36m@@ -59,7 +109,7 @@[m
+             android:layout_height="50dp"[m
+             android:layout_marginStart="40sp"[m
+             android:layout_marginEnd="40sp"[m
+[31m-            android:layout_marginBottom="20sp"[m
+[32m+[m[32m            android:layout_marginBottom="5sp"[m
+             android:background="@drawable/rounded"[m
+             android:ems="10"[m
+             android:inputType="textPersonName"[m
+[36m@@ -85,7 +135,7 @@[m
+             android:layout_height="50dp"[m
+             android:layout_marginStart="40sp"[m
+             android:layout_marginEnd="40sp"[m
+[31m-            android:layout_marginBottom="40sp"[m
+[32m+[m[32m            android:layout_marginBottom="30sp"[m
+             android:background="@drawable/rounded"[m
+             android:ems="10"[m
+             android:inputType="textPersonName"[m
+[1mdiff --git a/build.gradle b/build.gradle[m
+[1mindex 17f0646..2308a36 100644[m
+[1m--- a/build.gradle[m
+[1m+++ b/build.gradle[m
+[36m@@ -1,4 +1,6 @@[m
+[31m-// Top-level build file where you can add configuration options common to all sub-projects/modules.[m
+[32m+[m[32mbuildscript {[m
+[32m+[m
+[32m+[m[32m}// Top-level build file where you can add configuration options common to all sub-projects/modules.[m
+ plugins {[m
+     id 'com.android.application' version '7.1.3' apply false[m
+     id 'com.android.library' version '7.1.3' apply false[m
