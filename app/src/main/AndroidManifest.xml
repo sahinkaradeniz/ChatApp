@@ -10,7 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.Chating"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MessagingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MessagingActivitiy"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ContactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

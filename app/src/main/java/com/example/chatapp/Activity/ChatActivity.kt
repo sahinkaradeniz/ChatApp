@@ -1,0 +1,50 @@
+package com.example.chatapp.Activity
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.chatapp.Fragment.FragmentChatt
+import com.example.chatapp.Fragment.FragmentPeople
+import com.example.chatapp.databinding.ActivityChatBinding
+import com.google.android.material.tabs.TabLayoutMediator
+
+class ChatActivity : AppCompatActivity() {
+    private lateinit var binding:ActivityChatBinding
+    private val fragmentlist=ArrayList<Fragment>()
+    private val fragmentHeadList=ArrayList<String>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding= ActivityChatBinding.inflate(layoutInflater)
+        val view =binding.root
+        setContentView(view)
+
+        fragmentlist.add(FragmentChatt())
+        fragmentlist.add(FragmentPeople())
+
+        fragmentHeadList.add("Chats")
+        fragmentHeadList.add("People")
+
+        val adapter= ViewPagerAdapter(this)
+        binding.viewpager.adapter=adapter
+
+        TabLayoutMediator(binding.tablayout,binding.viewpager){tab,position -> //Tab layout kısımları içerisinde index numarasına göre veri yazacak
+            tab.setText(fragmentHeadList[position])
+        }.attach()
+
+
+
+    }
+    inner class  ViewPagerAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity){ //görüntüleme işlemini gerçekleştiriyor
+        override fun getItemCount(): Int {
+            return fragmentlist.size //kaç tane fragment organize ediceğinin sayısını veriyoruz
+        }
+
+        override fun createFragment(position: Int): Fragment {
+            return fragmentlist[position]
+        }
+
+    }
+}
