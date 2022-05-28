@@ -1,4 +1,4 @@
-package com.example.chatapp.Activity
+package com.example.chatapp.Listener
 
 import com.example.chatapp.data.TalksData
 

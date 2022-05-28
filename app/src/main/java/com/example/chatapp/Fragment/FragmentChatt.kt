@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.chatapp.Activity.Chating
 import com.example.chatapp.Activity.MessagingActivity
-import com.example.chatapp.Activity.OnChatClickListener
+import com.example.chatapp.Listener.OnChatClickListener
 import com.example.chatapp.Adapters.TalksAdapter
 import com.example.chatapp.R
 import com.example.chatapp.data.TalksData
@@ -18,7 +17,7 @@ import com.example.chatapp.databinding.FragmentChattBinding
 
 
 @Suppress("UNREACHABLE_CODE")
-class FragmentChatt : Fragment() ,OnChatClickListener{
+class FragmentChatt : Fragment() , OnChatClickListener {
     private var _binding:FragmentChattBinding?=null
     private val binding get()=_binding!!
     private lateinit var talksData: ArrayList<TalksData>
@@ -65,7 +64,7 @@ class FragmentChatt : Fragment() ,OnChatClickListener{
 
     override fun onChatItem(talksData: TalksData) {
         val intent=Intent(activity,MessagingActivity::class.java)
-         intent.putExtra("name",talksData.name)
+         intent.putExtra("name",talksData)
         startActivity(intent)
         Toast.makeText(context,"Name : "+talksData.name+"",Toast.LENGTH_LONG).show()
     }

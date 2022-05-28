@@ -1,7 +1,25 @@
 package com.example.chatapp.data
 
 import com.google.firebase.database.IgnoreExtraProperties
+import java.io.Serializable
 
 @IgnoreExtraProperties
-data class User (var name:String?="",var surname:String?="",var userName:String?="",var email:String?="",var password:String?="",var photo:Int?=0){
+ class User:Serializable{
+    var id:String?=null
+    var name:String?=null
+    var phoneNumber:String?=null
+    var profileImage:String?=null
+
+   constructor(){}
+    constructor(name:String,phoneNumber:String?){
+        this.name=name
+        this.phoneNumber=phoneNumber
+    }
+   constructor(id:String?,name:String,phoneNumber:String?,profileImage:String?){
+       this.id=id
+       this.name=name
+       this.phoneNumber=phoneNumber
+       this.profileImage=profileImage
+   }
+
 }

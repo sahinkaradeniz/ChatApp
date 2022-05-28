@@ -1,5 +1,6 @@
 package com.example.chatapp.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,15 +12,23 @@ import com.example.chatapp.Fragment.loginFragment2
 import com.example.chatapp.R
 import com.example.chatapp.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.firebase.auth.FirebaseAuth
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
+    private lateinit var  firebaseAuth: FirebaseAuth
     private val fragmentlist=ArrayList<Fragment>()
     private val fragmentHeadList=ArrayList<String>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        firebaseAuth= FirebaseAuth.getInstance()
+        val firebaseUser=firebaseAuth.currentUser
+         if(firebaseUser!=null) {
+            val newintent = Intent(this, ChatActivity::class.java)
+            startActivity(newintent)
+        }
         super.onCreate(savedInstanceState)
         binding= DataBindingUtil.setContentView(this, R.layout.activity_main)
 
@@ -35,8 +44,6 @@ class MainActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tablayout,binding.viewpager){tab,position -> //Tab layout kısımları içerisinde index numarasına göre veri yazacak
             tab.setText(fragmentHeadList[position])
         }.attach()
-
-
 
     }
 
