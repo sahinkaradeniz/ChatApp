@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        firebaseAuth= FirebaseAuth.getInstance()
+        firebaseAuth = FirebaseAuth.getInstance()
         val firebaseUser=firebaseAuth.currentUser
          if(firebaseUser!=null) {
             val newintent = Intent(this, ChatActivity::class.java)

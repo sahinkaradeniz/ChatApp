@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.chatapp.Activity.VerifyActivity
-import com.example.chatapp.data.User
+import com.example.chatapp.Activity.SignUpVerifyActivity
 import com.example.chatapp.databinding.FragmentLogin2Binding
 class loginFragment2 :Fragment() {
     private var _binding:FragmentLogin2Binding?=null
@@ -17,16 +16,14 @@ class loginFragment2 :Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         _binding= FragmentLogin2Binding.inflate(inflater,container,false)
-
-    //    var user=User(name,phone)
         binding.buttonSign.setOnClickListener{
             val name=binding.signName.text.toString()
             val phone=binding.phoneNumber.text.toString()
-            if (TextUtils.isEmpty(phone)){
-                Toast.makeText(activity,"Please enter phone number",Toast.LENGTH_SHORT).show()
+            if (TextUtils.isEmpty(phone) && TextUtils.isEmpty(name)){
+                Toast.makeText(activity,"Please enter phone name and number",Toast.LENGTH_SHORT).show()
             }else{
                 Clear()
-                val intent=Intent(activity,VerifyActivity::class.java)
+                val intent=Intent(activity,SignUpVerifyActivity::class.java)
                 intent.putExtra("phone",phone)
                 intent.putExtra("name",name)
                 startActivity(intent)

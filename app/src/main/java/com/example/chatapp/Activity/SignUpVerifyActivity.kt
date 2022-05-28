@@ -19,7 +19,7 @@ import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.concurrent.TimeUnit
-class VerifyActivity : AppCompatActivity() {
+class SignUpVerifyActivity : AppCompatActivity() {
     private lateinit var binding:ActivityVerifyBinding
     private lateinit var phone:String
     private lateinit var name: String
@@ -52,7 +52,7 @@ class VerifyActivity : AppCompatActivity() {
 
             override fun onVerificationFailed(e: FirebaseException) {
                 progessDialog.dismiss()
-                Toast.makeText(this@VerifyActivity,"${e.message}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SignUpVerifyActivity,"${e.message}",Toast.LENGTH_SHORT).show()
                 Log.d(TAG,"onVerificationFailed : ${e.message}")
 
             }
@@ -64,7 +64,7 @@ class VerifyActivity : AppCompatActivity() {
                 forceResendingToken=token
                 progessDialog.dismiss()
 
-                Toast.makeText(this@VerifyActivity,"Verification code sent..",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SignUpVerifyActivity,"Verification code sent..",Toast.LENGTH_SHORT).show()
 
             }
 
@@ -75,7 +75,7 @@ class VerifyActivity : AppCompatActivity() {
 
             val code =binding.verifyText.text.toString().trim()
             if(TextUtils.isEmpty(code)){
-                Toast.makeText(this@VerifyActivity,"Please enter verification code ",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SignUpVerifyActivity,"Please enter verification code ",Toast.LENGTH_SHORT).show()
             }else{
                 VerifyPhoneNumberWithCode(mVerificationId,code)
             }
