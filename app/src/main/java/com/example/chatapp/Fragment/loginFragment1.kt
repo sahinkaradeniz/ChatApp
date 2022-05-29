@@ -8,13 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.chatapp.Activity.ChatActivity
-import com.example.chatapp.Activity.VerifiyActivity
+import com.example.chatapp.Activity.SignInVerifiyActivity
 import com.example.chatapp.databinding.FragmentLogin1Binding
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
-
 
 class loginFragment1 : Fragment() {
    private var _binding:FragmentLogin1Binding?=null
@@ -26,7 +21,7 @@ class loginFragment1 : Fragment() {
             if(TextUtils.isEmpty(phone)){
                 Toast.makeText(activity,"Please enter phone number",Toast.LENGTH_SHORT).show()
             }else {
-                val intent=Intent(activity,VerifiyActivity::class.java)
+                val intent=Intent(activity,SignInVerifiyActivity::class.java)
                 intent.putExtra("phone",phone)
                 startActivity(intent)
             }

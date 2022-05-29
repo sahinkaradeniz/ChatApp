@@ -123,10 +123,10 @@ class SignUpVerifyActivity : AppCompatActivity() {
         user.phoneNumber=firebaseAuth.currentUser!!.phoneNumber
         user.id=firebaseAuth.currentUser!!.uid
         user.name=name
-        db.collection("users")
-            .add(user)
+        db.collection("users").document(firebaseAuth.currentUser!!.uid)
+            .set(user)
             .addOnSuccessListener { documentReference ->
-                Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference}")
             }
             .addOnFailureListener { e ->
                 Log.w(ContentValues.TAG, "Error adding document", e)

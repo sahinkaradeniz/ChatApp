@@ -15,7 +15,7 @@ import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import java.util.concurrent.TimeUnit
 
-class VerifiyActivity : AppCompatActivity() {
+class SignInVerifiyActivity : AppCompatActivity() {
     private lateinit var binding:ActivityVerifiyBinding
     private lateinit var phone:String
     private var forceResendingToken: PhoneAuthProvider.ForceResendingToken?=null
@@ -44,7 +44,7 @@ class VerifiyActivity : AppCompatActivity() {
 
             override fun onVerificationFailed(e: FirebaseException) {
                 progessDialog.dismiss()
-                Toast.makeText(this@VerifiyActivity,"${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SignInVerifiyActivity,"${e.message}", Toast.LENGTH_SHORT).show()
                 Log.d(TAG,"onVerificationFailed : ${e.message}")
 
             }
@@ -56,7 +56,7 @@ class VerifiyActivity : AppCompatActivity() {
                 forceResendingToken=token
                 progessDialog.dismiss()
 
-                Toast.makeText(this@VerifiyActivity,"Verification code sent..", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SignInVerifiyActivity,"Verification code sent..", Toast.LENGTH_SHORT).show()
 
             }
 
@@ -67,7 +67,7 @@ class VerifiyActivity : AppCompatActivity() {
 
             val code =binding.verifyTextLogin.text.toString().trim()
             if(TextUtils.isEmpty(code)){
-                Toast.makeText(this@VerifiyActivity,"Please enter verification code ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SignInVerifiyActivity,"Please enter verification code ", Toast.LENGTH_SHORT).show()
             }else{
                 VerifyPhoneNumberWithCode(mVerificationId,code)
             }
@@ -121,6 +121,7 @@ class VerifiyActivity : AppCompatActivity() {
                 if(u.displayName==null){
                     Toast.makeText(this,"Create New Profile",Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this,MainActivity::class.java))
+                    finish()
                 }else{
                     val pho  = firebaseAuth.currentUser!!.phoneNumber
                     Toast.makeText(this,"logged ın as $pho", Toast.LENGTH_SHORT).show()

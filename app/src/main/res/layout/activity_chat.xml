@@ -11,8 +11,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/designwhite"
-        >
+        android:background="@color/designwhite">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
             </TextView>
 
             <ImageButton
-                android:id="@+id/menuButton"
+                android:id="@+id/userImage"
                 android:layout_width="39dp"
                 android:layout_height="37dp"
                 android:layout_marginStart="215dp"

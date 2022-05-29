@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/update"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.ProfileActivity">
@@ -95,7 +96,7 @@
             <EditText
                 android:id="@+id/userName"
                 android:layout_width="328dp"
-                android:layout_height="50dp"
+                android:layout_height="47dp"
                 android:layout_centerHorizontal="false"
                 android:layout_centerVertical="false"
                 android:layout_marginStart="10dp"
@@ -140,6 +141,45 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Idea"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ideaText"
+                android:layout_width="328dp"
+                android:layout_height="47dp"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="false"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="Happy" />
+
+            <ImageButton
+                android:id="@+id/updateIdea"
+                android:layout_width="17dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/profiledit"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/button"
             android:layout_width="359dp"
@@ -147,9 +187,20 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/roundend1"
             android:text="SİGN OUT"
-            android:textColor="@color/black"
+            android:textColor="@color/red"
             android:textStyle="bold"
             tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/updateImage"
+            android:layout_width="113dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/roundend1"
+            android:text="Update"
+            android:textColor="@android:color/holo_green_dark"
+            android:visibility="invisible"
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 

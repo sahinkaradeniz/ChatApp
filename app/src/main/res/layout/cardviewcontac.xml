@@ -16,7 +16,7 @@
             android:layout_height="match_parent">
 
             <com.github.siyamed.shapeimageview.CircularImageView
-                android:id="@+id/contacimage"
+                android:id="@+id/talksImage"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:src="@drawable/test_avatar"
@@ -37,7 +37,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.064"
-                app:layout_constraintStart_toEndOf="@+id/contacimage"
+                app:layout_constraintStart_toEndOf="@+id/talksImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView

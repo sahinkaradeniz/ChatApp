@@ -1,21 +1,17 @@
 package com.example.chatapp.Activity
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.chatapp.Fragment.FragmentChatt
 import com.example.chatapp.Fragment.FragmentPeople
-import com.example.chatapp.data.User
 import com.example.chatapp.databinding.ActivityChatBinding
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+
 
 class ChatActivity : AppCompatActivity() {
     private lateinit var binding:ActivityChatBinding
@@ -30,12 +26,14 @@ class ChatActivity : AppCompatActivity() {
         setContentView(binding.root)
         firebaseAuth= FirebaseAuth.getInstance()
         checkUser()
-        binding.menuButton.setOnClickListener {
+        binding.userImage.setOnClickListener {
             val intent=Intent(this,ProfileActivity::class.java)
             val name=firebaseAuth.currentUser!!.displayName
             val phone=firebaseAuth.currentUser!!.phoneNumber
+            val image=firebaseAuth.currentUser!!.photoUrl
             intent.putExtra("name",name)
             intent.putExtra("phone",phone)
+            intent.putExtra("image",image)
             startActivity(intent)
         }
         fragmentlist.add(FragmentChatt())

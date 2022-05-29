@@ -1,7 +1,7 @@
 package com.example.chatapp.Listener
 
-import com.example.chatapp.data.TalksData
+import com.example.chatapp.data.Chat
 
 interface OnChatClickListener {
-    fun onChatItem(talksData: TalksData)
+    fun onChatItem(chat: Chat)
 }

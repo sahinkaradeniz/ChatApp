@@ -13,7 +13,7 @@ class ContacViewHolder (container:ViewGroup):RecyclerView.ViewHolder(LayoutInfla
     val contaccard:CardView=itemView.findViewById(R.id.contaccard)
     val contacname:TextView=itemView.findViewById(R.id.contacname)
     val contacmessage:TextView=itemView.findViewById(R.id.contacmessage)
-    val contacimage:com.github.siyamed.shapeimageview.CircularImageView=itemView.findViewById(R.id.contacimage)
+    val contacimage:com.github.siyamed.shapeimageview.CircularImageView=itemView.findViewById(R.id.talksImage)
 
     fun bind(contactData: ContactData){
         contacname.text=contactData.ad
