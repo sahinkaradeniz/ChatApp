@@ -10,7 +10,6 @@ import android.widget.Toast
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chatapp.Activity.MessagingActivity
-import com.example.chatapp.Activity.SignInVerifiyActivity
 import com.example.chatapp.Adapters.UsersRecyclerAdapter
 import com.example.chatapp.Listener.OnChatClickListener
 import com.example.chatapp.data.Chat
@@ -64,7 +63,8 @@ class FragmentChatt : Fragment() ,OnChatClickListener{
                         val image=document.get("profileImage") as String
                         val message=document.get("message") as String
                         val phone=document.get("phoneNumber") as String
-                        val chat=Chat(name,id,phone, image,message)
+                        val pho=phone.toString()
+                        val chat=Chat(name,id,pho,image,message)
                         users.add(chat)
                         adapter.users=users
 

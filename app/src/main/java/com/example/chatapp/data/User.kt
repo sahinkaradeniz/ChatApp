@@ -5,11 +5,11 @@ import java.io.Serializable
 
 @IgnoreExtraProperties
  class User:Serializable{
-    var id:String?=null
-    var name:String?=null
-    var phoneNumber:String?=null
-    var profileImage:Any?=null
-    var message:String?=null
+    var id:String?=""
+    var name:String?=""
+    var phoneNumber:String?=""
+    var profileImage:Any?="https://firebasestorage.googleapis.com/v0/b/chatapp-87fa1.appspot.com/o/images%2Fprofileavatar.png?alt=media&token=199a52a3-de81-4e08-8fc5-519eb288f900"
+    var message:String?="idea"
 
    constructor(){}
     constructor(name:String,phoneNumber:String?){
@@ -22,6 +22,7 @@ import java.io.Serializable
        this.phoneNumber=phoneNumber
        this.profileImage=profileImage
        this.message=message
+
    }
 
 

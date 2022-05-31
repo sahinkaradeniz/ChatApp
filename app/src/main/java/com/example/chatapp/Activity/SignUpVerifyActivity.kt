@@ -85,7 +85,7 @@ class SignUpVerifyActivity : AppCompatActivity() {
         }
 
     }
-  public fun startPhoneNumberVerification(phone:String){
+  private fun startPhoneNumberVerification(phone:String){
       Log.d(TAG,"startPhoneNumberVerification : $phone")
        progessDialog.setMessage("Verifying phone Number...")
         progessDialog.show()
@@ -144,6 +144,7 @@ class SignUpVerifyActivity : AppCompatActivity() {
         }
 
     }
+
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         Log.d(TAG,"signInWithPhoneAuthCredential : $credential")
             progessDialog.setMessage("Loging Inn..")
