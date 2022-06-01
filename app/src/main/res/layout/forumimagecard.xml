@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
+    android:layout_height="340dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -42,6 +42,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
                 android:layout_width="0dp"
                 android:layout_height="37dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -55,8 +56,8 @@
 
                     <ImageButton
                         android:id="@+id/likeButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:background="@color/white"
@@ -88,14 +89,27 @@
                 android:id="@+id/forumText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:text="Düsüncelerim bu sekilde deneme"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@+id/forumName"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/forumName"
                 app:layout_constraintTop_toBottomOf="@+id/forumName" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/forumImage"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/otp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

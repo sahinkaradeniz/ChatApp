@@ -6,8 +6,8 @@
     tools:context=".Fragment.FragmentChatt">
 
     <androidx.recyclerview.widget.RecyclerView
-        tools:listitem="@layout/cardviewtalks"
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/forumimagecard" />
 </FrameLayout>

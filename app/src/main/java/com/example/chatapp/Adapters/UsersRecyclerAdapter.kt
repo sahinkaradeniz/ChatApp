@@ -1,15 +1,12 @@
 package com.example.chatapp.Adapters
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.chatapp.Activity.MessagingActivity
 import com.example.chatapp.Listener.OnChatClickListener
 import com.example.chatapp.R
 import com.example.chatapp.data.Chat
@@ -43,7 +40,7 @@ class UsersRecyclerAdapter(private val onChatClickListener: OnChatClickListener)
     override fun onBindViewHolder(holder: UserHolder, position: Int) {
             val name=holder.itemView.findViewById<TextView>(R.id.talksName)
             val message=holder.itemView.findViewById<TextView>(R.id.talksmessage)
-            val image=holder.itemView.findViewById<com.github.siyamed.shapeimageview.CircularImageView>(R.id.talksImage)
+            val image=holder.itemView.findViewById<com.github.siyamed.shapeimageview.CircularImageView>(R.id.EditImage)
             val data=users[position]
         name.text=users.get(position).name
         message.text=users.get(position).message

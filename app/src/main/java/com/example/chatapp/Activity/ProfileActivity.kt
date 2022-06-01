@@ -48,7 +48,9 @@ class ProfileActivity : AppCompatActivity() {
             userName.setText(name)
             profilePhone.setText(phone)
             Picasso.get().load(firebaseAuth.currentUser!!.photoUrl).into(binding.profilePhoto)
+            binding.ideaText.setText("deneme")
         }
+
 
         binding.profilePhoto.setOnClickListener {
             if (ContextCompat.checkSelfPermission(this,android.Manifest.permission.READ_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED){
