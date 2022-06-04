@@ -31,9 +31,7 @@ class ForumEdit : AppCompatActivity() {
     private lateinit var binding:ActivityForumEditBinding
     var selectedBitmap: Bitmap?=null
     var selectedImage: Uri?=null
-    var image:String?=null
     val storage= Firebase.storage
-    val forum= Forum()
     val db= Firebase.firestore
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,6 +78,8 @@ class ForumEdit : AppCompatActivity() {
             }else{
                 sendImagePost(null)
             }
+            val intent=Intent(this,ChatActivity::class.java)
+            startActivity(intent)
         }
 
 

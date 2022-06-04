@@ -60,17 +60,12 @@ class ForumRecyclerViewAdapter :RecyclerView.Adapter<ForumRecyclerViewAdapter.Fo
         val text=holder.itemView.findViewById<TextView>(R.id.forumText)
         val Profileimage=holder.itemView.findViewById<com.github.siyamed.shapeimageview.CircularImageView>(R.id.forumImage)
         val image=holder.itemView.findViewById<ImageView>(R.id.image)
-        if(forums.get(position).Image!="noimage"){
             name.text=forums.get(position).name
             text.text=forums.get(position).text
             Picasso.get().load(forums.get(position).profileImage).into(Profileimage)
-            Picasso.get().load(forums.get(position).Image).into(image)
-        }else{
-            name.text=forums.get(position).name
-            text.text=forums.get(position).text
-            Picasso.get().load(forums.get(position).profileImage).into(Profileimage)
-        }
-
+            if(forums.get(position).Image!="noimage"){
+                Picasso.get().load(forums.get(position).Image).into(image)
+            }
     }
 
     override fun getItemCount(): Int {

@@ -9,6 +9,4 @@ data class Forum(
     var text: String ="",
     var date: String ="",
     var Image:String="noimage") {
-
-
 }
