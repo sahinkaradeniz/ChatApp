@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.chatapp.Activity.MainActivity
 import com.example.chatapp.Activity.SignInVerifiyActivity
 import com.example.chatapp.databinding.FragmentLogin1Binding
 

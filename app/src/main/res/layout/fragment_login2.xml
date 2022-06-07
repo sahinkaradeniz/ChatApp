@@ -41,7 +41,8 @@
             android:ems="10"
             android:hint="  Name"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
 
         <TextView
             android:id="@+id/textView8"
@@ -66,7 +67,8 @@
             android:ems="10"
             android:hint="  +90xxxxxxxxxx"
             android:inputType="phone"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:paddingStart="10dp" />
 
         <Button
             android:id="@+id/buttonSign"

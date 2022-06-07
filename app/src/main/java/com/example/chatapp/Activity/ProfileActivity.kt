@@ -48,7 +48,7 @@ class ProfileActivity : AppCompatActivity() {
             userName.setText(name)
             profilePhone.setText(phone)
             Picasso.get().load(firebaseAuth.currentUser!!.photoUrl).into(binding.profilePhoto)
-            binding.ideaText.setText("deneme")
+            binding.ideaText.setText("İdea")
         }
 
 
@@ -91,6 +91,7 @@ class ProfileActivity : AppCompatActivity() {
                 .update(mapOf(
                     "message" to idea
                 ))
+            Toast.makeText(this,"Update İdea",Toast.LENGTH_LONG).show()
         }
 
 

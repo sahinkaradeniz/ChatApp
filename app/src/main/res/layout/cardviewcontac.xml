@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
+    android:layout_height="120dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/contaccard"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="122dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="122dp"
             android:background="#FCFEFF">
 
             <com.github.siyamed.shapeimageview.CircularImageView
@@ -56,7 +56,7 @@
                     <ImageButton
                         android:id="@+id/likeButton"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:background="@color/white"
@@ -66,10 +66,10 @@
                     <ImageButton
                         android:id="@+id/imageButton2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/white"
-                        app:srcCompat="@drawable/retweet"
+                        app:srcCompat="@drawable/rt"
                         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                     <ImageButton

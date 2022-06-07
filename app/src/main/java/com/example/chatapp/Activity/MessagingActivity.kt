@@ -107,7 +107,7 @@ class MessagingActivity : AppCompatActivity() {
         binding.userName.setText(name)
         Picasso.get().load(profileImage).into(binding.userImage)
         setContentView(view)
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+   //     getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         binding.backMenu.setOnClickListener {
             val intent=Intent(this,ChatActivity::class.java)
